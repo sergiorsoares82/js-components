@@ -12,25 +12,33 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
     <link href="./styles.css" rel="stylesheet" />
   </head>
   <body>
     <nav class="navbar">
-      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
-
-      <button type="button" class="navbar-burger" onclick="toggleMenuOpen()">
-        <span class="material-icons">menu</span>
-      </button>
-      <h1 class="navbar-title">Awards</h1>
+      <input
+        spellcheck="false"
+        type="text"
+        class="search"
+        id="search"
+        placeholder="e.g. Nike Trainers"
+      />
+      <button
+        onclick="toggleSearch()"
+        type="button"
+        class="search-toggle"
+      ></button>
       <nav class="navbar-menu">
-        <button type="button">Skills</button>
-        <button type="button" class="active">Awards</button>
-        <button type="button">Projects</button>
+        <button type="button" class="uil uil-bag active"></button>
+        <button type="button" class="uil uil-laptop"></button>
+        <button type="button" class="uil uil-envelope"></button>
       </nav>
     </nav>
-    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript">
+      const toggleSearch = () => document.body.classList.toggle("open");
+    </script>
   </body>
 </html>
